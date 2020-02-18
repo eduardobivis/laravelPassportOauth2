@@ -5,8 +5,8 @@
     <body>
         <form action="/oauth/clients" method="post">
             @csrf
-            <input name="name" type="text"/>
-            <input name="redirect" type="text"/>
+            <input name="name" type="text" placeholder="Name"/>
+            <input name="redirect" type="text" placeholder="Redirect URL"/>
             <input type="submit" value="send" />
         </form>
 
