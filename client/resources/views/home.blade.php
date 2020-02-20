@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
