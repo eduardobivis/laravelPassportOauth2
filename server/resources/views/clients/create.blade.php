@@ -1,28 +1,33 @@
+@extends('layouts.app')
+
 <html>
     <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
     </head>
     <body>
-        <form action="/oauth/clients" method="post">
-            @csrf
-            <input name="name" type="text" placeholder="Name"/>
-            <input name="redirect" type="text" placeholder="Redirect URL"/>
-            <input type="submit" value="send" />
-        </form>
+        @section('content')
 
-        <script>
-            // const data = {
-            //     name: 'Client Name',
-            //     redirect: 'http://example.com/callback'
-            // };
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Create a new Client</div>
 
-            // axios.post('/oauth/clients', data)
-            // .then(response => {
-            //     console.log(response.data);
-            // })
-            // .catch (response => {
-            //     // List errors on response...
-            // });
-        </script>
+                        <div class="card-body">
+                            @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @endsection
     </body>
 </html>
