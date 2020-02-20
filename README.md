@@ -1,4 +1,4 @@
-Laravel Project with Passport Oauth2 (WIP)
+Laravel Project with Passport Oauth2
 
 ## General Set Up
 

@@ -24,7 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/redirect', function () {
 
     $query = http_build_query([
-        'client_id' => 'PUT_YOUR_CLIENT_ID_HERE',
+        'client_id' => '3',
         'redirect_uri' => 'http://localhost:8001/callback',
         'response_type' => 'code',
         'scope' => ''
@@ -41,8 +41,8 @@ Route::get('/callback', function (Request $request) {
     $response = $http->post('http://localhost:8000/oauth/token', [
         'form_params' => [
             'grant_type' => 'authorization_code',
-            'client_id' => 'PUT_YOUR_CLIENT_ID_HERE',
-            'client_secret' => 'PUT_YOUR_CLIENT_SECRET_HERE',
+            'client_id' => '3',
+            'client_secret' => 'ysLiFKN1qD0qnP12kdldxXDpiP4V2R6vc80eeMS6',
             'redirect_uri' => 'http://localhost:8001/callback',
             'code' => $request->code,
         ],
