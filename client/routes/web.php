@@ -41,8 +41,8 @@ Route::get('/callback', function (Request $request) {
     $response = $http->post('http://localhost:8000/oauth/token', [
         'form_params' => [
             'grant_type' => 'authorization_code',
-            'client_id' => 'PLACE_YOUR_CLIENT_ID_HERE',
-            'client_secret' => 'PLACE_YOUR_CLIENT_SECRET_HERE',
+            'client_id' => '1',
+            'client_secret' => 'cnhJfCMZWskL95yqK9Wth0wS6pixHcCSnqyOCC9i',
             'redirect_uri' => 'http://localhost:8001/callback',
             'code' => $request->code,
         ],
